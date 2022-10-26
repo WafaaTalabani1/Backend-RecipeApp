@@ -1,0 +1,31 @@
+server:
+  port: 8099
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  servlet:
+    multipart:
+      max-file-size : 50MB
+      max-request-size : 50MB
+  datasource:
+    password: admin
+    url: jdbc:postgresql://localhost:5432/foodaddicts
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+aws:
+  accessKeyId:
+  secretKey:
+
+jwt:
+  secret:
+    key: thisissupersecretthisissupersecretthisissupersecretthisissupersecretthisissupersecret
